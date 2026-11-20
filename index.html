@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>优果网优美图库官网 - 品质影像图库,原创企业视觉平台</title>
+<meta name="description" content="优果网优美图库官方网站，专注高品质原创影像素材与企业视觉内容生态，汇聚专业创作者，为品牌提供值得信赖的图库服务与内容解决方案。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c6b4a'/%3E%3Ccircle cx='24' cy='26' r='7' fill='%23ffd166'/%3E%3Cpath d='M14 48c2-10 8-14 14-14s12 4 14 14z' fill='%23e8f5ec'/%3E%3C/svg%3E">
+<style>
+:root{
+  --yg-forest:#1c6b4a;
+  --yg-forest-deep:#124a33;
+  --yg-leaf:#3f9d72;
+  --yg-amber:#e8963c;
+  --yg-cream:#f5f2e9;
+  --yg-sand:#e6dfcd;
+  --yg-ink:#1d2621;
+  --yg-muted:#5f6f66;
+  --yg-line:#d8d2c2;
+  --yg-card:#ffffff;
+  --yg-radius:16px;
+  --yg-shadow:0 10px 30px rgba(28,58,44,.10);
+  --yg-shadow-hover:0 18px 42px rgba(28,58,44,.18);
+  --yg-header-h:118px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--yg-cream);
+  color:var(--yg-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+html{scroll-padding-top:calc(var(--yg-header-h) + 12px)}
+
+
+
+/* ---------- sticky wrapper: announcement + header ---------- */
+.yg-sticky-shell{
+  position:sticky;
+  top:0;
+  z-index:120;
+}
+.yg-announce{
+  background:linear-gradient(90deg,var(--yg-forest-deep),var(--yg-forest) 55%,#2a8259);
+  color:#eaf6ef;
+  font-size:13.5px;
+  letter-spacing:.3px;
+}
+.yg-announce-inner{
+  max-width:1240px;
+  margin:0 auto;
+  padding:9px 22px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.yg-announce-tag{
+  flex:0 0 auto;
+  background:var(--yg-amber);
+  color:#2a1a05;
+  font-weight:700;
+  font-size:12px;
+  padding:2px 10px;
+  border-radius:999px;
+  letter-spacing:1px;
+}
+.yg-announce-track{
+  display:flex;
+  gap:26px;
+  overflow:hidden;
+  white-space:nowrap;
+  flex:1 1 auto;
+  min-width:0;
+}
+.yg-announce-track span{flex:0 0 auto}
+.yg-announce-track span::before{content:"◆";color:var(--yg-amber);margin-right:8px;font-size:10px;vertical-align:1px}
+.yg-announce-more{
+  flex:0 0 auto;
+  font-size:12.5px;
+  border:1px solid rgba(234,246,239,.5);
+  padding:2px 12px;
+  border-radius:999px;
+  transition:.25s;
+}
+.yg-announce-more:hover{background:rgba(255,255,255,.14)}
+
+.yg-site-head{
+  background:rgba(245,242,233,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--yg-line);
+}
+.yg-head-inner{
+  max-width:1240px;
+  margin:0 auto;
+  padding:12px 22px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.yg-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.yg-brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(140deg,var(--yg-forest),var(--yg-leaf));
+  display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:19px;
+  box-shadow:0 6px 16px rgba(28,107,74,.32);
+}
+.yg-brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;line-height:1.2}
+.yg-brand-name small{display:block;font-size:10.5px;font-weight:500;color:var(--yg-muted);letter-spacing:2px}
+.yg-nav{display:flex;gap:4px;margin-left:6px;flex:1 1 auto;flex-wrap:wrap}
+.yg-nav a{
+  font-size:14.5px;
+  padding:7px 12px;
+  border-radius:10px;
+  color:#2f3d35;
+  transition:.22s;
+  font-weight:500;
+}
+.yg-nav a:hover{background:#e3ece3;color:var(--yg-forest-deep)}
+.yg-head-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.yg-search{
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  border:1px solid var(--yg-line);
+  border-radius:999px;
+  padding:4px 4px 4px 14px;
+  transition:.25s;
+}
+.yg-search:focus-within{border-color:var(--yg-leaf);box-shadow:0 0 0 3px rgba(63,157,114,.18)}
+.yg-search input{
+  border:none;outline:none;background:transparent;
+  width:152px;font-size:13.5px;color:var(--yg-ink);
+}
+.yg-search button{
+  background:var(--yg-forest);
+  color:#fff;border-radius:999px;
+  padding:6px 14px;font-size:13px;
+  transition:.22s;
+}
+.yg-search button:hover{background:var(--yg-forest-deep)}
+.yg-search-hint{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;
+  background:#fff;border:1px solid var(--yg-line);border-radius:12px;
+  box-shadow:var(--yg-shadow);
+  padding:10px 14px;font-size:12.5px;color:var(--yg-muted);
+  display:none;
+}
+.yg-search-hint.is-open{display:block}
+.yg-search-hint b{color:var(--yg-forest)}
+.yg-nav-toggle{
+  display:none;
+  width:40px;height:40px;border-radius:10px;
+  border:1px solid var(--yg-line);
+  background:#fff;
+  font-size:18px;
+  line-height:1;
+}
+
+/* ---------- shared layout ---------- */
+.yg-wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.yg-section{padding:64px 0}
+.yg-section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:18px;margin-bottom:32px;flex-wrap:wrap;
+}
+.yg-eyebrow{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;
+  color:var(--yg-leaf);margin-bottom:8px;
+}
+.yg-h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:.5px;line-height:1.35;color:var(--yg-forest-deep)}
+.yg-h2 em{font-style:normal;color:var(--yg-amber)}
+.yg-section-sub{font-size:14px;color:var(--yg-muted);max-width:560px;margin-top:8px}
+.yg-h3{font-size:17px;font-weight:700;line-height:1.5}
+.yg-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:10px 22px;border-radius:999px;
+  font-size:14px;font-weight:600;
+  transition:.24s;white-space:nowrap;
+}
+.yg-btn-primary{background:var(--yg-forest);color:#fff;box-shadow:0 8px 20px rgba(28,107,74,.28)}
+.yg-btn-primary:hover{background:var(--yg-forest-deep);transform:translateY(-2px)}
+.yg-btn-ghost{border:1.5px solid var(--yg-forest);color:var(--yg-forest)}
+.yg-btn-ghost:hover{background:var(--yg-forest);color:#fff}
+.yg-btn-soft{background:#e2efe4;color:var(--yg-forest-deep)}
+.yg-btn-soft:hover{background:#d2e6d6}
+
+/* ---------- hero ---------- */
+.yg-hero{
+  background:
+    radial-gradient(1100px 480px at 88% -10%,rgba(232,150,60,.20),transparent 60%),
+    radial-gradient(760px 420px at 4% 110%,rgba(63,157,114,.18),transparent 62%),
+    linear-gradient(180deg,#f7f5ec,#eef0e2);
+  border-bottom:1px solid var(--yg-line);
+  padding:58px 0 70px;
+}
+.yg-hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+}
+.yg-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--yg-line);
+  padding:5px 14px;border-radius:999px;
+  font-size:12.5px;color:var(--yg-forest-deep);font-weight:600;
+  margin-bottom:20px;
+}
+.yg-hero-badge i{width:8px;height:8px;border-radius:50%;background:var(--yg-amber);display:inline-block}
+.yg-hero h1{
+  font-size:clamp(34px,4.6vw,52px);
+  line-height:1.16;
+  letter-spacing:1px;
+  color:var(--yg-forest-deep);
+  font-weight:900;
+}
+.yg-hero h1 span{color:var(--yg-amber)}
+.yg-hero-lead{
+  margin-top:16px;font-size:16.5px;color:#40534a;font-weight:500;
+}
+.yg-hero-desc{
+  margin-top:14px;font-size:14.5px;color:var(--yg-muted);max-width:560px;
+}
+.yg-hero-actions{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+.yg-hero-stats{
+  display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;
+}
+.yg-hero-stats li strong{
+  display:block;font-size:27px;font-weight:900;color:var(--yg-forest);
+  letter-spacing:.5px;line-height:1.2;
+}
+.yg-hero-stats li span{font-size:12.5px;color:var(--yg-muted);letter-spacing:.5px}
+
+.yg-hero-visual{position:relative}
+.yg-hero-main{
+  border-radius:22px;overflow:hidden;
+  box-shadow:0 26px 60px rgba(24,58,42,.26);
+  border:6px solid #fff;
+  position:relative;
+  aspect-ratio:16/11;
+  background:#dbe7dc;
+}
+.yg-hero-main img{width:100%;height:100%;object-fit:cover}
+.yg-hero-main::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(12,40,26,.55));
+}
+.yg-hero-main .yg-hero-cap{
+  position:absolute;left:18px;right:18px;bottom:15px;z-index:2;color:#fff;
+}
+.yg-hero-cap strong{font-size:15px;display:block}
+.yg-hero-cap span{font-size:12px;opacity:.85}
+.yg-hero-float{
+  position:absolute;right:-16px;bottom:-24px;
+  background:#fff;border-radius:16px;padding:14px 18px;
+  box-shadow:var(--yg-shadow);
+  display:flex;align-items:center;gap:12px;
+  max-width:250px;
+}
+.yg-hero-float .yg-float-ico{
+  width:40px;height:40px;border-radius:11px;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--yg-amber),#f2b969);
+  display:grid;place-items:center;color:#fff;font-size:19px;
+}
+.yg-hero-float b{font-size:14px;display:block;color:var(--yg-forest-deep)}
+.yg-hero-float small{font-size:11.5px;color:var(--yg-muted)}
+.yg-hero-chip{
+  position:absolute;left:-18px;top:22px;
+  background:rgba(255,255,255,.96);
+  border-radius:14px;padding:10px 15px;
+  box-shadow:var(--yg-shadow);font-size:12.5px;font-weight:600;
+  color:var(--yg-forest-deep);
+  display:flex;align-items:center;gap:8px;
+}
+.yg-hero-chip b{color:var(--yg-amber);font-size:15px}
+
+/* ---------- about deep parse ---------- */
+.yg-about{background:#fbfaf4;border-bottom:1px solid var(--yg-line)}
+.yg-about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:46px;align-items:start}
+.yg-about-art{
+  position:relative;border-radius:20px;overflow:hidden;
+  border:1px solid var(--yg-line);
+  box-shadow:var(--yg-shadow);
+  aspect-ratio:4/5;background:#dfe9da;
+}
+.yg-about-art img{width:100%;height:100%;object-fit:cover}
+.yg-about-quote{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(0deg,rgba(16,48,32,.9),rgba(16,48,32,0));
+  color:#eaf6ef;padding:52px 20px 18px;font-size:13px;letter-spacing:.4px;
+}
+.yg-about-quote b{display:block;font-size:15px;margin-bottom:4px;color:#fff}
+.yg-prose p{font-size:14.6px;color:#41524a;margin-bottom:15px;text-align:justify}
+.yg-prose p strong{color:var(--yg-forest-deep)}
+.yg-about-pillars{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;
+}
+.yg-pillar{
+  background:#fff;border:1px solid var(--yg-line);border-radius:14px;
+  padding:16px 15px;transition:.25s;
+}
+.yg-pillar:hover{transform:translateY(-4px);box-shadow:var(--yg-shadow-hover);border-color:#bcd8c6}
+.yg-pillar b{display:block;font-size:14px;color:var(--yg-forest-deep);margin-bottom:6px}
+.yg-pillar span{font-size:12.5px;color:var(--yg-muted);line-height:1.65}
+
+/* ---------- focus ---------- */
+.yg-focus{background:var(--yg-cream)}
+.yg-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px}
+.yg-vcard{
+  background:#fff;border:1px solid var(--yg-line);border-radius:var(--yg-radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:.28s;position:relative;
+}
+.yg-vcard:hover{transform:translateY(-6px);box-shadow:var(--yg-shadow-hover);border-color:#c2dbc9}
+.yg-vthumb{
+  position:relative;aspect-ratio:16/9;overflow:hidden;background:#e7e2d3;
+}
+.yg-vthumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.yg-vcard:hover .yg-vthumb img{transform:scale(1.05)}
+.yg-vtag{
+  position:absolute;top:12px;left:12px;z-index:2;
+  background:rgba(255,255,255,.94);color:var(--yg-forest-deep);
+  font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+  letter-spacing:.5px;
+}
+.yg-vplay{
+  position:absolute;inset:0;display:grid;place-items:center;z-index:2;
+  opacity:0;transition:.3s;
+  background:rgba(12,40,26,.24);
+}
+.yg-vcard:hover .yg-vplay{opacity:1}
+.yg-vplay span{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,.94);color:var(--yg-forest);
+  display:grid;place-items:center;font-size:18px;padding-left:3px;
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
+}
+.yg-vdur{
+  position:absolute;right:10px;bottom:10px;z-index:2;
+  background:rgba(14,40,26,.78);color:#fff;
+  font-size:11px;padding:2px 8px;border-radius:6px;
+}
+.yg-vbody{padding:16px 17px 17px;display:flex;flex-direction:column;gap:8px;flex:1}
+.yg-vtitle{font-size:15.5px;font-weight:700;line-height:1.5;color:#20342a}
+.yg-vsum{font-size:13px;color:var(--yg-muted);line-height:1.65;flex:1}
+.yg-vmeta{
+  display:flex;align-items:center;gap:8px;font-size:12px;color:var(--yg-muted);
+  flex-wrap:wrap;padding-top:4px;border-top:1px dashed #e4dfd0;
+}
+.yg-vmeta .yg-dot{width:3px;height:3px;border-radius:50%;background:#b6c3ba}
+.yg-vactions{display:flex;gap:8px;align-items:center;margin-top:4px}
+.yg-act{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12.5px;color:var(--yg-muted);
+  padding:5px 11px;border-radius:999px;border:1px solid #e3ddcd;
+  transition:.2s;background:#fbfaf5;
+}
+.yg-act:hover{background:#eef4ee;color:var(--yg-forest);border-color:#c5dccd}
+.yg-act.is-liked{color:#c9583a;border-color:#f0cbbd;background:#fdf1ec}
+.yg-act.is-saved{color:var(--yg-forest);border-color:#b9d8c3;background:#e8f2ea}
+.yg-focus-side{display:flex;flex-direction:column;gap:18px}
+.yg-mini{
+  display:flex;gap:13px;background:#fff;border:1px solid var(--yg-line);
+  border-radius:14px;padding:10px;transition:.25s;align-items:center;
+}
+.yg-mini:hover{transform:translateX(4px);box-shadow:var(--yg-shadow);border-color:#c2dbc9}
+.yg-mini-thumb{
+  width:112px;flex:0 0 112px;aspect-ratio:16/10;border-radius:10px;overflow:hidden;
+  position:relative;background:#e7e2d3;
+}
+.yg-mini-thumb img{width:100%;height:100%;object-fit:cover}
+.yg-mini-info{min-width:0}
+.yg-mini-info b{display:block;font-size:13.5px;line-height:1.45;color:#20342a}
+.yg-mini-info span{font-size:11.5px;color:var(--yg-muted);display:block;margin-top:4px}
+
+/* ---------- topics ---------- */
+.yg-topics{background:linear-gradient(180deg,#f2f6ee,#fbfaf4);border-top:1px solid var(--yg-line);border-bottom:1px solid var(--yg-line)}
+.yg-topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.yg-topic{
+  background:#fff;border:1px solid var(--yg-line);border-radius:var(--yg-radius);
+  overflow:hidden;transition:.28s;
+}
+.yg-topic:hover{transform:translateY(-5px);box-shadow:var(--yg-shadow-hover);border-color:#c2dbc9}
+.yg-topic-cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e7e2d3}
+.yg-topic-cover img{width:100%;height:100%;object-fit:cover}
+.yg-topic-status{
+  position:absolute;right:10px;top:10px;background:var(--yg-amber);color:#2a1a05;
+  font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;
+}
+.yg-topic-body{padding:15px 17px 18px}
+.yg-topic-body b{font-size:15px;color:var(--yg-forest-deep);display:block;margin-bottom:6px}
+.yg-topic-body p{font-size:12.8px;color:var(--yg-muted);line-height:1.7;min-height:66px}
+.yg-topic-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:12px;font-size:12px;color:var(--yg-muted);
+}
+.yg-topic-foot a{color:var(--yg-forest);font-weight:600}
+
+/* ---------- creators ---------- */
+.yg-creators{background:var(--yg-cream)}
+.yg-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.yg-creator{
+  background:#fff;border:1px solid var(--yg-line);border-radius:var(--yg-radius);
+  padding:22px 18px;text-align:center;transition:.28s;
+  display:flex;flex-direction:column;align-items:center;
+}
+.yg-creator:hover{transform:translateY(-6px);box-shadow:var(--yg-shadow-hover);border-color:#c2dbc9}
+.yg-avatar{
+  width:66px;height:66px;border-radius:50%;
+  display:grid;place-items:center;font-size:23px;font-weight:800;color:#fff;
+  margin-bottom:12px;letter-spacing:0;
+  box-shadow:0 8px 18px rgba(28,58,44,.18);
+}
+.yg-av-1{background:linear-gradient(140deg,#2f8f66,#7cc79c)}
+.yg-av-2{background:linear-gradient(140deg,#c97a2b,#efb56c)}
+.yg-av-3{background:linear-gradient(140deg,#3b6fa8,#7fa6cf)}
+.yg-av-4{background:linear-gradient(140deg,#8a5a9a,#c295cf)}
+.yg-creator b{font-size:14.5px;color:#20342a}
+.yg-creator .yg-cfield{font-size:12px;color:var(--yg-leaf);font-weight:600;margin-top:3px}
+.yg-creator p{font-size:12.3px;color:var(--yg-muted);line-height:1.65;margin-top:9px;min-height:60px}
+.yg-cstats{display:flex;gap:16px;margin-top:12px;padding-top:12px;border-top:1px dashed #e4dfd0;width:100%;justify-content:center}
+.yg-cstats span{font-size:11.5px;color:var(--yg-muted)}
+.yg-cstats b{color:var(--yg-forest-deep);font-size:13px}
+
+/* ---------- stories ---------- */
+.yg-stories{background:#fbfaf4;border-top:1px solid var(--yg-line);border-bottom:1px solid var(--yg-line)}
+.yg-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.yg-story{
+  background:#fff;border:1px solid var(--yg-line);border-radius:var(--yg-radius);
+  padding:22px 21px;transition:.28s;position:relative;overflow:hidden;
+}
+.yg-story::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--yg-leaf),var(--yg-amber));
+  opacity:.85;
+}
+.yg-story:hover{transform:translateY(-4px);box-shadow:var(--yg-shadow-hover)}
+.yg-story-tag{font-size:11.5px;font-weight:700;color:var(--yg-amber);letter-spacing:1px}
+.yg-story b{display:block;font-size:15px;color:var(--yg-forest-deep);margin:8px 0 8px;line-height:1.5}
+.yg-story p{font-size:13px;color:var(--yg-muted);line-height:1.8}
+.yg-story-foot{margin-top:14px;font-size:12px;color:#85968c;display:flex;justify-content:space-between}
+
+/* ---------- wall ---------- */
+.yg-wall{background:var(--yg-cream)}
+.yg-wall-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:14px;
+}
+.yg-wall-item{
+  position:relative;border-radius:14px;overflow:hidden;background:#e7e2d3;
+  border:1px solid var(--yg-line);transition:.3s;
+}
+.yg-wall-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.yg-wall-item:hover img{transform:scale(1.06)}
+.yg-wall-item:hover{box-shadow:var(--yg-shadow-hover)}
+.yg-wall-cap{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 13px 11px;
+  background:linear-gradient(0deg,rgba(14,40,26,.82),transparent);
+  color:#fff;font-size:12px;font-weight:600;line-height:1.4;
+}
+.yg-w-lg{grid-column:span 4;aspect-ratio:4/3}
+.yg-w-md{grid-column:span 4;aspect-ratio:1/1}
+.yg-w-sm{grid-column:span 3;aspect-ratio:4/5}
+.yg-w-wide{grid-column:span 6;aspect-ratio:16/9}
+
+/* ---------- updates / faq / contact ---------- */
+.yg-aux{background:#fbfaf4;border-top:1px solid var(--yg-line)}
+.yg-aux-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.yg-updates{display:flex;flex-direction:column;gap:12px}
+.yg-update{
+  display:flex;gap:14px;background:#fff;border:1px solid var(--yg-line);
+  border-radius:12px;padding:14px 16px;transition:.24s;align-items:flex-start;
+}
+.yg-update:hover{border-color:#c2dbc9;box-shadow:var(--yg-shadow)}
+.yg-update-date{
+  flex:0 0 62px;text-align:center;background:#eef4ee;border-radius:9px;padding:7px 4px;
+}
+.yg-update-date b{display:block;font-size:17px;color:var(--yg-forest);line-height:1.1}
+.yg-update-date span{font-size:10.5px;color:var(--yg-muted)}
+.yg-update-info b{font-size:13.8px;color:#20342a;display:block;line-height:1.5}
+.yg-update-info p{font-size:12.4px;color:var(--yg-muted);margin-top:4px;line-height:1.6}
+.yg-faq{display:flex;flex-direction:column;gap:10px}
+.yg-faq details{
+  background:#fff;border:1px solid var(--yg-line);border-radius:12px;
+  padding:0 16px;transition:.22s;
+}
+.yg-faq details[open]{border-color:#b9d8c3;box-shadow:var(--yg-shadow)}
+.yg-faq summary{
+  cursor:pointer;list-style:none;padding:14px 0;font-size:13.8px;font-weight:600;
+  color:#20342a;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.yg-faq summary::-webkit-details-marker{display:none}
+.yg-faq summary::after{content:"+";font-size:17px;color:var(--yg-leaf);font-weight:400;transition:.2s}
+.yg-faq details[open] summary::after{content:"–";color:var(--yg-amber)}
+.yg-faq p{font-size:12.9px;color:var(--yg-muted);padding:0 0 14px;line-height:1.75}
+
+.yg-contact-bar{
+  margin-top:42px;background:linear-gradient(120deg,var(--yg-forest-deep),var(--yg-forest) 60%,#2f8a60);
+  border-radius:20px;padding:32px 34px;color:#eaf6ef;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  box-shadow:0 20px 44px rgba(20,60,42,.26);
+}
+.yg-contact-bar h3{font-size:21px;font-weight:800;color:#fff;line-height:1.4}
+.yg-contact-bar p{font-size:13.5px;opacity:.85;margin-top:6px;max-width:520px}
+.yg-contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+.yg-contact-actions .yg-btn-primary{background:var(--yg-amber);color:#2a1a05;box-shadow:none}
+.yg-contact-actions .yg-btn-primary:hover{background:#f3ab5a}
+.yg-contact-actions .yg-btn-ghost{border-color:rgba(234,246,239,.6);color:#eaf6ef}
+.yg-contact-actions .yg-btn-ghost:hover{background:rgba(255,255,255,.14);color:#fff}
+
+/* ---------- footer ---------- */
+.yg-footer{background:#12321f;color:#b9cbbf;padding:52px 0 26px}
+.yg-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px}
+.yg-footer h4{font-size:13.5px;color:#eaf6ef;letter-spacing:1px;margin-bottom:14px;font-weight:700}
+.yg-footer p,.yg-footer li{font-size:12.7px;line-height:1.9}
+.yg-footer ul li a:hover{color:var(--yg-amber)}
+.yg-footer .yg-fbrand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.yg-footer .yg-fbrand .yg-brand-mark{width:36px;height:36px;font-size:16px;border-radius:10px;box-shadow:none}
+.yg-footer .yg-fbrand b{color:#fff;font-size:16px;letter-spacing:.5px}
+.yg-footer-bottom{
+  margin-top:36px;padding-top:18px;border-top:1px solid rgba(185,203,191,.18);
+  font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.yg-footer-bottom span{opacity:.8}
+
+/* ---------- back to top & toast ---------- */
+.yg-top-btn{
+  position:fixed;right:22px;bottom:26px;z-index:150;
+  width:46px;height:46px;border-radius:14px;
+  background:var(--yg-forest);color:#fff;font-size:18px;
+  display:grid;place-items:center;
+  box-shadow:0 12px 26px rgba(28,107,74,.36);
+  opacity:0;pointer-events:none;transform:translateY(14px);
+  transition:.3s;
+}
+.yg-top-btn.is-show{opacity:1;pointer-events:auto;transform:none}
+.yg-top-btn:hover{background:var(--yg-forest-deep)}
+.yg-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(18,50,31,.96);color:#eaf6ef;font-size:13px;
+  padding:10px 22px;border-radius:999px;z-index:300;
+  opacity:0;pointer-events:none;transition:.3s;white-space:nowrap;
+  box-shadow:0 14px 30px rgba(0,0,0,.26);
+}
+.yg-toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- modal ---------- */
+.yg-modal{
+  position:fixed;inset:0;z-index:400;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(12,32,22,.55);backdrop-filter:blur(3px);
+}
+.yg-modal.is-open{display:flex}
+.yg-modal-card{
+  background:#fff;border-radius:18px;max-width:430px;width:100%;
+  padding:26px 26px 22px;box-shadow:0 30px 70px rgba(0,0,0,.3);
+  animation:ygPop .28s ease;
+}
+@keyframes ygPop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+.yg-modal-card h3{font-size:18px;color:var(--yg-forest-deep);margin-bottom:6px}
+.yg-modal-card p{font-size:13px;color:var(--yg-muted);line-height:1.7}
+.yg-modal-card input,.yg-modal-card textarea{
+  width:100%;margin-top:12px;border:1px solid var(--yg-line);border-radius:10px;
+  padding:9px 12px;font-family:inherit;font-size:13.5px;outline:none;transition:.2s;
+  color:var(--yg-ink);
+}
+.yg-modal-card input:focus,.yg-modal-card textarea:focus{border-color:var(--yg-leaf);box-shadow:0 0 0 3px rgba(63,157,114,.16)}
+.yg-modal-foot{display:flex;gap:10px;margin-top:16px;justify-content:flex-end}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .yg-hero-grid{grid-template-columns:1fr;gap:40px}
+  .yg-hero-visual{max-width:600px}
+  .yg-about-grid{grid-template-columns:1fr;gap:30px}
+  .yg-about-art{aspect-ratio:16/10;max-height:340px}
+  .yg-focus-grid{grid-template-columns:1fr}
+  .yg-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-topic-grid,.yg-story-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-footer-grid{grid-template-columns:1fr 1fr}
+  .yg-aux-grid{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:860px){
+  :root{--yg-header-h:112px}
+  .yg-nav-toggle{display:grid;place-items:center}
+  .yg-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fbfaf4;border-bottom:1px solid var(--yg-line);
+    padding:12px 22px 18px;flex-direction:column;gap:2px;
+    box-shadow:0 18px 30px rgba(28,58,44,.12);
+  }
+  .yg-nav.is-open{display:flex}
+  .yg-nav a{padding:10px 8px}
+  .yg-head-inner{position:relative;flex-wrap:wrap}
+  .yg-search input{width:110px}
+  .yg-focus-side{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+}
+@media (max-width:680px){
+  .yg-hero{padding:40px 0 52px}
+  .yg-hero-stats{gap:22px}
+  .yg-hero-float{right:0;bottom:-18px;padding:11px 14px}
+  .yg-hero-chip{left:0;top:12px}
+  .yg-topic-grid,.yg-story-grid,.yg-creator-grid{grid-template-columns:1fr}
+  .yg-focus-side{grid-template-columns:1fr}
+  .yg-about-pillars{grid-template-columns:1fr}
+  .yg-wall-grid{grid-template-columns:repeat(6,1fr)}
+  .yg-w-lg,.yg-w-md{grid-column:span 6}
+  .yg-w-sm{grid-column:span 3}
+  .yg-w-wide{grid-column:span 6}
+  .yg-footer-grid{grid-template-columns:1fr;gap:26px}
+  .yg-contact-bar{padding:24px 20px}
+  .yg-section{padding:48px 0}
+  .yg-announce-track{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .yg-announce-track::-webkit-scrollbar{display:none}
+  .yg-search{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="yg-sticky-shell">
+  <div class="yg-announce" aria-label="站点更新公告">
+    <div class="yg-announce-inner">
+      <span class="yg-announce-tag">最新发布</span>
+      <div class="yg-announce-track">
+        <span>「秋日光影计划」新增 1,280 张正版高清图片</span>
+        <span>11 月创作者激励活动开放报名中</span>
+        <span>图库检索新增颜色与构图双条件筛选</span>
+        <span>企业视觉解决方案 2026 版白皮书上线</span>
+      </div>
+      <a class="yg-announce-more" href="#yg-updates">查看全部动态</a>
+    </div>
+  </div>
+
+  <header class="yg-site-head">
+    <div class="yg-head-inner">
+      <a class="yg-brand" href="#yg-hero" aria-label="优果网优美图库官网首页">
+        <span class="yg-brand-mark">优</span>
+        <span class="yg-brand-name">优果网优美图库<small>YOUGUO IMAGE</small></span>
+      </a>
+      <button class="yg-nav-toggle" id="ygNavToggle" aria-label="展开导航" aria-expanded="false">☰</button>
+      <nav class="yg-nav" id="ygNav" aria-label="主导航">
+        <a href="#yg-hero">首页</a>
+        <a href="#yg-focus">焦点内容</a>
+        <a href="#yg-topics">专题企划</a>
+        <a href="#yg-creators">创作者</a>
+        <a href="#yg-wall">影像墙</a>
+        <a href="#yg-updates">企业动态</a>
+        <a href="#yg-faq">帮助中心</a>
+        <a href="#yg-contact">联系我们</a>
+      </nav>
+      <div class="yg-head-tools">
+        <div class="yg-search" id="ygSearch">
+          <input type="search" id="ygSearchInput" placeholder="搜索图片 / 专题 / 创作者" aria-label="站内搜索">
+          <button type="button" id="ygSearchBtn">搜索</button>
+          <div class="yg-search-hint" id="ygSearchHint"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="yg-hero" id="yg-hero">
+    <div class="yg-wrap">
+      <div class="yg-hero-grid">
+        <div class="yg-hero-copy">
+          <span class="yg-hero-badge"><i></i>优果网优美图库 · 官方网站</span>
+          <h1>优果网优美图库</h1>
+          <p class="yg-hero-lead">让每一帧影像，都成为品牌值得信赖的表达。</p>
+          <p class="yg-hero-desc">优果网优美图库是一家深耕视觉内容领域的原创影像平台，以正版高清图片、视频素材与视觉解决方案，服务企业品牌与专业创作者，构建可持续的内容生态。</p>
+          <div class="yg-hero-actions">
+            <a class="yg-btn yg-btn-primary" href="#yg-focus">浏览焦点内容 →</a>
+            <a class="yg-btn yg-btn-ghost" href="#yg-creators">认识创作者</a>
+            <button class="yg-btn yg-btn-soft" type="button" data-yg-open="submit">我要投稿</button>
+          </div>
+          <ul class="yg-hero-stats">
+            <li><strong>58,600+</strong><span>正版高清影像</span></li>
+            <li><strong>2,340</strong><span>签约创作者</span></li>
+            <li><strong>9 年</strong><span>持续运营经验</span></li>
+          </ul>
+        </div>
+
+        <div class="yg-hero-visual">
+          <div class="yg-hero-main">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 560'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23225c40'/%3E%3Cstop offset='1' stop-color='%234a8f68'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23f0b25c'/%3E%3Cstop offset='1' stop-color='%23e8883a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='560' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='130' r='110' fill='url(%23g2)' opacity='.9'/%3E%3Cpath d='M0 420 Q180 320 340 400 T800 380 V560 H0Z' fill='%23a8d3b4' opacity='.55'/%3E%3Cpath d='M0 470 Q220 390 420 460 T800 440 V560 H0Z' fill='%231a4a32' opacity='.85'/%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='70' y='86' width='190' height='130' rx='14'/%3E%3Crect x='94' y='110' width='142' height='82' rx='8' fill='%23d6e6d8'/%3E%3Ccircle cx='128' cy='140' r='13' fill='%23e8963c'/%3E%3Cpath d='M96 186 l40-34 30 24 26-20 44 30z' fill='%238fbf9f'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.75'%3E%3Crect x='290' y='120' width='150' height='100' rx='12'/%3E%3Crect x='310' y='140' width='110' height='60' rx='6' fill='%23cfe3d4'/%3E%3C/g%3E%3C/svg%3E" alt="优果网优美图库品牌主视觉：绿色山谷中的影像作品墙">
+            <div class="yg-hero-cap">
+              <strong>优果网优美图库 · 品牌主视觉</strong>
+              <span>秋日光影计划 · 官方发布</span>
+            </div>
+          </div>
+          <div class="yg-hero-chip"><b>★</b> 行业领先正版图库</div>
+          <div class="yg-hero-float">
+            <span class="yg-float-ico">◉</span>
+            <div>
+              <b>本周新增 1,280 张</b>
+              <small>原创高清素材 · 持续运营</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / DEEP PARSE -->
+  <section class="yg-section yg-about" id="yg-about">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">官网品牌深度解析</span>
+          <h2 class="yg-h2">关于优果网优美图库：<em>一个以品质为底色的视觉内容生态</em></h2>
+          <p class="yg-section-sub">从图片出发，向品牌视觉的完整链条延伸，我们始终相信影像的力量来自真实与专业。</p>
+        </div>
+      </div>
+
+      <div class="yg-about-grid">
+        <div class="yg-about-art">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 600'%3E%3Cdefs%3E%3ClinearGradient id='a1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e9e2cc'/%3E%3Cstop offset='1' stop-color='%23c9d9c4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='600' fill='url(%23a1)'/%3E%3Ccircle cx='360' cy='120' r='86' fill='%23e8963c' opacity='.55'/%3E%3Crect x='52' y='150' width='250' height='180' rx='16' fill='%23225c40' opacity='.88'/%3E%3Crect x='78' y='178' width='198' height='124' rx='9' fill='%23dcead9'/%3E%3Ccircle cx='118' cy='214' r='16' fill='%23e8963c'/%3E%3Cpath d='M80 288 l58-52 40 34 34-26 58 44z' fill='%237fb392'/%3E%3Crect x='150' y='368' width='276' height='150' rx='14' fill='%23ffffff' opacity='.92'/%3E%3Crect x='176' y='394' width='158' height='14' rx='7' fill='%23b9d3bd'/%3E%3Crect x='176' y='420' width='224' height='10' rx='5' fill='%23dbe6d6'/%3E%3Crect x='176' y='440' width='196' height='10' rx='5' fill='%23dbe6d6'/%3E%3Crect x='176' y='466' width='96' height='26' rx='13' fill='%23225c40'/%3E%3Cg fill='%23225c40' opacity='.6'%3E%3Ccircle cx='80' cy='540' r='10'/%3E%3Ccircle cx='106' cy='540' r='10'/%3E%3Ccircle cx='132' cy='540' r='10'/%3E%3C/g%3E%3C/svg%3E" alt="优果网优美图库品牌故事配图：影像与设计元素组合">
+          <div class="yg-about-quote">
+            <b>“影像的价值，在于被信任。”</b>
+            优果网优美图库 · 品牌理念
+          </div>
+        </div>
+
+        <div class="yg-prose">
+          <p>作为一家专注视觉内容的<strong>企业</strong>，优果网优美图库官方网站所定义的“图库”，并不只是一个素材仓库。我们把自己看作内容生态的建设者：一端连着数千位坚持原创的创作者，另一端连着需要稳定品质影像的企业品牌与内容团队。自创立以来，平台持续深耕正版高清图片与视频素材领域，围绕“可商用、可追溯、可持续”建立完整的授权与审核机制，让每一次使用都安心。</p>
+          <p>在优果网优美图库，关键词有两层含义。第一层是“优美”——画面需要经得起放大与审视，构图、光影、色彩都要有明确的审美主张；第二层是“优果”——优质的内容最终要结出可被使用、可被传播、可被记住的果实。因此我们在内容组织上采用主题化、场景化的方式，把零散的图片整理成可直接落地的视觉方案，从品牌海报、电商详情页到社交媒体封面，都能快速找到匹配的表达。</p>
+          <p>平台的内容生态由三个层次构成。<strong>第一层是基础图库</strong>：覆盖自然风光、城市建筑、人物生活、商业办公、节日节气等大类，全部为原创或正版授权，配套清晰的授权说明；<strong>第二层是专题企划</strong>：由编辑团队联合创作者发起，例如“秋日光影计划”“城市清晨的十二种打开方式”，让图片形成叙事；<strong>第三层是企业服务</strong>：为品牌客户提供视觉风格诊断、素材定制与长期内容陪伴，把图库能力延伸到完整的品牌视觉体系。</p>
+          <p>我们尤其重视创作者。优果网优美图库为签约创作者提供作品展示位、数据反馈、创作激励与版权保护服务，并定期举办主题创作挑战与线上分享会，让“匠心”被看见。平台坚持用户至上：每张图片都经过人工与系统双重审核，标签体系持续迭代，搜索体验按季度优化。正因如此，平台在行业内积累了稳定的口碑，成为许多企业与内容团队的日常首选。</p>
+          <p>面向未来，优果网优美图库将继续以真实、温暖、专业为底色，把更多具有影响力的原创影像带给中文内容世界。我们相信，好的图库不仅是效率工具，更是一种审美教育——它让品牌更懂得如何表达，也让创作者更愿意持续创作。这正是我们持续运营这份事业的初心，也是官方网站希望向每一位来访者传递的诚意。</p>
+
+          <div class="yg-about-pillars">
+            <div class="yg-pillar">
+              <b>正版授权</b>
+              <span>完整授权链路与使用说明，企业商用更值得信赖。</span>
+            </div>
+            <div class="yg-pillar">
+              <b>原创优先</b>
+              <span>签约创作者体系，坚持原创与匠心，拒绝同质化。</span>
+            </div>
+            <div class="yg-pillar">
+              <b>场景化交付</b>
+              <span>从单张图片到整套视觉方案，减少沟通与返工。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="yg-section yg-focus" id="yg-focus">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">焦点内容</span>
+          <h2 class="yg-h2">本期推荐：<em>被反复使用的六组影像</em></h2>
+          <p class="yg-section-sub">编辑团队从近期上传作品中精选，兼顾审美表达与商业可用性。</p>
+        </div>
+        <a class="yg-btn yg-btn-ghost" href="#yg-wall">进入影像墙</a>
+      </div>
+
+      <div class="yg-focus-grid">
+        <article class="yg-vcard">
+          <div class="yg-vthumb">
+            <span class="yg-vtag">品牌故事</span>
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f3b45f'/%3E%3Cstop offset='1' stop-color='%23d9782c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='%23fdf6e9'/%3E%3Ccircle cx='640' cy='110' r='96' fill='url(%23f1)' opacity='.9'/%3E%3Cpath d='M0 330 Q200 250 400 320 T800 300 V450 H0Z' fill='%23225c40' opacity='.92'/%3E%3Crect x='70' y='110' width='300' height='190' rx='18' fill='%23ffffff' stroke='%23e3d9c3' stroke-width='3'/%3E%3Crect x='96' y='140' width='130' height='92' rx='10' fill='%23cfe0c8'/%3E%3Ccircle cx='128' cy='168' r='14' fill='%23e8963c'/%3E%3Cpath d='M98 226 l40-34 30 24 26-20 42 30z' fill='%236f9e7d'/%3E%3Crect x='244' y='140' width='100' height='12' rx='6' fill='%23d8cfb8'/%3E%3Crect x='244' y='164' width='76' height='10' rx='5' fill='%23e2dac5'/%3E%3Crect x='244' y='186' width='90' height='10' rx='5' fill='%23e2dac5'/%3E%3C/svg%3E" alt="专题封面：秋日暖光下的品牌视觉设计稿展示">
+            <div class="yg-vplay"><span>▶</span></div>
+            <span class="yg-vdur">04:32</span>
+          </div>
+          <div class="yg-vbody">
+            <h3 class="yg-vtitle">一支品牌宣传片，如何用 12 张图讲完九年故事</h3>
+            <p class="yg-vsum">从早期胶片质感到今天的数字影像，优果网优美图库把品牌历程压缩进一组连续画面。视频拆解了选图逻辑、色调统一与叙事节奏，适合需要做企业宣传内容的团队参考。</p>
+            <div class="yg-vmeta">
+              <span>优果编辑室</span><span class="yg-dot"></span><span>11-16 发布</span><span class="yg-dot"></span><span>1.8 万次浏览</span>
+            </div>
+            <div class="yg-vactions">
+              <button class="yg-act" data-yg-like type="button">♥ <span data-yg-like-num>326</span></button>
+              <button class="yg-act" data-yg-save type="button">收藏</button>
+              <button class="yg-act" data-yg-share type="button">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="yg-focus-side">
+          <a class="yg-mini" href="#yg-focus">
+            <span class="yg-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%232b5e86'/%3E%3Ccircle cx='250' cy='52' r='34' fill='%23f0c26a' opacity='.9'/%3E%3Cpath d='M0 140 L80 92 L150 130 L220 96 L320 138 V200 H0Z' fill='%235d93b8'/%3E%3Cpath d='M0 168 L70 140 L160 172 L240 146 L320 170 V200 H0Z' fill='%231d4462' opacity='.9'/%3E%3Cg fill='%23d8e8f2' opacity='.7'%3E%3Ccircle cx='60' cy='40' r='3'/%3E%3Ccircle cx='120' cy='26' r='2.5'/%3E%3Ccircle cx='180' cy='44' r='3'/%3E%3C/g%3E%3C/svg%3E" alt="专题封面：蓝调城市天际线与清晨薄雾">
+            </span>
+            <span class="yg-mini-info">
+              <b>城市清晨的十二种打开方式</b>
+              <span>城市探索 · 已更新 8 期</span>
+            </span>
+          </a>
+          <a class="yg-mini" href="#yg-focus">
+            <span class="yg-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23efe7d6'/%3E%3Crect x='34' y='44' width='120' height='112' rx='10' fill='%23ffffff' stroke='%23d9cfb8' stroke-width='2'/%3E%3Crect x='50' y='60' width='88' height='56' rx='6' fill='%23bfd8bc'/%3E%3Ccircle cx='72' cy='82' r='10' fill='%23e8963c'/%3E%3Cpath d='M52 112 l26-22 18 14 16-12 28 20z' fill='%2379a884'/%3E%3Crect x='176' y='64' width='112' height='12' rx='6' fill='%23cbbfa4'/%3E%3Crect x='176' y='88' width='84' height='10' rx='5' fill='%23dbd2bd'/%3E%3Crect x='176' y='108' width='96' height='10' rx='5' fill='%23dbd2bd'/%3E%3Crect x='176' y='132' width='64' height='22' rx='11' fill='%23225c40'/%3E%3C/svg%3E" alt="专题封面：桌面上的图片排版与设计草图">
+            </span>
+            <span class="yg-mini-info">
+              <b>一张图怎么改成一套品牌物料</b>
+              <span>实用技巧 · 6 个案例</span>
+            </span>
+          </a>
+          <a class="yg-mini" href="#yg-focus">
+            <span class="yg-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23d9e6e2'/%3E%3Ccircle cx='160' cy='86' r='46' fill='%23f4f0e4' stroke='%2391b8a6' stroke-width='3'/%3E%3Ccircle cx='160' cy='86' r='22' fill='%23225c40'/%3E%3Cpath d='M126 86 a34 34 0 0 1 68 0' fill='none' stroke='%23e8963c' stroke-width='5'/%3E%3Crect x='60' y='150' width='200' height='12' rx='6' fill='%23a9c6b8'/%3E%3Crect x='90' y='172' width='140' height='10' rx='5' fill='%23bcd3c7'/%3E%3C/svg%3E" alt="专题封面：光圈与镜头元素构成的视觉图形">
+            </span>
+            <span class="yg-mini-info">
+              <b>摄影师的构图私藏：三种稳定耐看的框架</b>
+              <span>经验分享 · 12 分钟</span>
+            </span>
+          </a>
+          <a class="yg-mini" href="#yg-focus">
+            <span class="yg-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23f6ece4'/%3E%3Cpath d='M0 150 Q90 110 170 142 T320 128 V200 H0Z' fill='%23e3b48c' opacity='.8'/%3E%3Crect x='104' y='52' width='112' height='86' rx='8' fill='%23ffffff' stroke='%23e0cbb8' stroke-width='2'/%3E%3Crect x='118' y='66' width='84' height='46' rx='5' fill='%23f2d8c2'/%3E%3Ccircle cx='150' cy='88' r='9' fill='%23c97a3c'/%3E%3Cpath d='M120 112 l26-20 18 14 16-12 24 18z' fill='%23d4a37c'/%3E%3C/svg%3E" alt="专题封面：暖色桌面上的相框与影像样片">
+            </span>
+            <span class="yg-mini-info">
+              <b>把日常照片整理成一套可交付作品集</b>
+              <span>日常记录 · 收藏 1.2 万</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="yg-section yg-topics" id="yg-topics">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">专题企划</span>
+          <h2 class="yg-h2">由编辑团队与创作者共同发起的<em>主题影像计划</em></h2>
+          <p class="yg-section-sub">每个专题都围绕一个具体场景展开，配合作品解读与使用建议，帮助品牌快速落地。</p>
+        </div>
+      </div>
+
+      <div class="yg-topic-grid">
+        <article class="yg-topic">
+          <div class="yg-topic-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f6d49a'/%3E%3Cstop offset='1' stop-color='%23e08c3c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23t1)'/%3E%3Ccircle cx='360' cy='70' r='48' fill='%23fff3d9' opacity='.9'/%3E%3Cpath d='M0 200 Q120 150 240 190 T480 176 V270 H0Z' fill='%232f6b47' opacity='.88'/%3E%3Cpath d='M0 232 Q140 196 280 224 T480 212 V270 H0Z' fill='%231b4a30'/%3E%3Cg stroke='%23ffffff' stroke-width='3' opacity='.55'%3E%3Cline x1='70' y1='70' x2='70' y2='110'/%3E%3Cline x1='90' y1='60' x2='90' y2='100'/%3E%3Cline x1='110' y1='76' x2='110' y2='116'/%3E%3C/g%3E%3C/svg%3E" alt="专题封面：秋日金色山野与暖光">
+            <span class="yg-topic-status">更新中</span>
+          </div>
+          <div class="yg-topic-body">
+            <b>秋日光影计划</b>
+            <p>围绕秋季自然光线的变化，收录山野、城市、室内三类场景的高品质图片，并提供不同肤色调色参考，适合季节营销与节日视觉。</p>
+            <div class="yg-topic-foot"><span>收录 1,280 张</span><a href="#yg-topics">查看专题</a></div>
+          </div>
+        </article>
+
+        <article class="yg-topic">
+          <div class="yg-topic-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e3ecef'/%3E%3Crect x='40' y='52' width='180' height='150' rx='12' fill='%23ffffff' stroke='%23cbdbdf' stroke-width='2'/%3E%3Crect x='58' y='72' width='144' height='86' rx='6' fill='%23a9c6cf'/%3E%3Ccircle cx='94' cy='102' r='12' fill='%23e8963c'/%3E%3Cpath d='M60 150 l40-32 28 22 24-18 40 28z' fill='%235d8c9a'/%3E%3Crect x='250' y='72' width='170' height='12' rx='6' fill='%23c2d3d8'/%3E%3Crect x='250' y='96' width='130' height='10' rx='5' fill='%23d3e0e4'/%3E%3Crect x='250' y='118' width='150' height='10' rx='5' fill='%23d3e0e4'/%3E%3Crect x='250' y='146' width='100' height='26' rx='13' fill='%23225c40'/%3E%3C/svg%3E" alt="专题封面：蓝灰色调的城市建筑与界面排版">
+            <span class="yg-topic-status">长期企划</span>
+          </div>
+          <div class="yg-topic-body">
+            <b>城市清晨的十二种打开方式</b>
+            <p>邀请十二位在地创作者，各自记录一座城市醒来的方式。作品附带拍摄参数与地点说明，适合文旅、生活方式与城市品牌内容。</p>
+            <div class="yg-topic-foot"><span>已更新 8 期</span><a href="#yg-topics">查看专题</a></div>
+          </div>
+        </article>
+
+        <article class="yg-topic">
+          <div class="yg-topic-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f4e9dd'/%3E%3Crect x='52' y='60' width='150' height='150' rx='75' fill='%23ffffff' stroke='%23e0cbb4' stroke-width='3'/%3E%3Ccircle cx='127' cy='120' r='30' fill='%23e3b48c'/%3E%3Cpath d='M92 178 a35 35 0 0 1 70 0z' fill='%23c98a58'/%3E%3Crect x='228' y='76' width='190' height='12' rx='6' fill='%23ddc7ae'/%3E%3Crect x='228' y='100' width='150' height='10' rx='5' fill='%23ead6c0'/%3E%3Crect x='228' y='122' width='176' height='10' rx='5' fill='%23ead6c0'/%3E%3Crect x='228' y='152' width='110' height='28' rx='14' fill='%232f6b47'/%3E%3Cg fill='%23dfc6ab'%3E%3Ccircle cx='80' cy='232' r='7'/%3E%3Ccircle cx='104' cy='232' r='7'/%3E%3Ccircle cx='128' cy='232' r='7'/%3E%3C/g%3E%3C/svg%3E" alt="专题封面：人物头像与图文排版示意">
+            <span class="yg-topic-status">征集中</span>
+          </div>
+          <div class="yg-topic-body">
+            <b>人物访谈：镜头背后的普通创作者</b>
+            <p>记录那些用影像记录生活的普通人。每位受访者配一组肖像与作品，讲述他们如何开始、如何坚持，以及如何形成自己的表达风格。</p>
+            <div class="yg-topic-foot"><span>征集 12 位</span><a href="#yg-topics">查看专题</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATORS -->
+  <section class="yg-section yg-creators" id="yg-creators">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">创作者矩阵</span>
+          <h2 class="yg-h2">内容生态的核心，是<em>持续创作的人</em></h2>
+          <p class="yg-section-sub">优果网优美图库签约创作者覆盖风光、人文、商业、生活方式等多个垂直领域。</p>
+        </div>
+        <button class="yg-btn yg-btn-soft" type="button" data-yg-open="submit">申请成为创作者</button>
+      </div>
+
+      <div class="yg-creator-grid">
+        <article class="yg-creator">
+          <span class="yg-avatar yg-av-1">林</span>
+          <b>林屿</b>
+          <span class="yg-cfield">风光 / 自然影像</span>
+          <p>在高原与海岸之间往返八年，习惯在日出前抵达拍摄点。作品色调克制，强调留白与呼吸感。</p>
+          <div class="yg-cstats"><span>作品 <b>1,240</b></span><span>关注 <b>36.8万</b></span></div>
+        </article>
+        <article class="yg-creator">
+          <span class="yg-avatar yg-av-2">周</span>
+          <b>周小满</b>
+          <span class="yg-cfield">美食 / 生活方式</span>
+          <p>拍家里的一日三餐，也拍街头小馆的烟火。擅长用暖色调呈现食物的真实质感。</p>
+          <div class="yg-cstats"><span>作品 <b>860</b></span><span>关注 <b>22.4万</b></span></div>
+        </article>
+        <article class="yg-creator">
+          <span class="yg-avatar yg-av-3">陈</span>
+          <b>陈见川</b>
+          <span class="yg-cfield">建筑 / 城市观察</span>
+          <p>建筑事务所出身，后来专职做视觉记录。喜欢在清晨和雨后的城市里寻找几何秩序。</p>
+          <div class="yg-cstats"><span>作品 <b>1,530</b></span><span>关注 <b>41.2万</b></span></div>
+        </article>
+        <article class="yg-creator">
+          <span class="yg-avatar yg-av-4">沈</span>
+          <b>沈知白</b>
+          <span class="yg-cfield">人文 / 情感故事</span>
+          <p>用影像记录手艺人、老店铺与正在消失的日常。作品多次入选平台年度精选。</p>
+          <div class="yg-cstats"><span>作品 <b>620</b></span><span>关注 <b>18.9万</b></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="yg-section yg-stories" id="yg-stories">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">故事与随笔</span>
+          <h2 class="yg-h2">在图片之外，<em>还有使用图片的人</em></h2>
+          <p class="yg-section-sub">三段来自创作者与品牌用户的真实记录，与本期视频内容相互呼应。</p>
+        </div>
+      </div>
+
+      <div class="yg-story-grid">
+        <article class="yg-story">
+          <span class="yg-story-tag">创作幕后</span>
+          <b>为了那张封面，我们在山里住了四天</b>
+          <p>原本只想拍一张秋季山脊的远眺图，结果连续三天阴雨。第四天清晨五点，云雾散开不到二十分钟，我们拍下了专题的开篇封面。回程时大家都没说话，那种被自然允许的感觉，很难转述。</p>
+          <div class="yg-story-foot"><span>林屿</span><span>11-12</span></div>
+        </article>
+        <article class="yg-story">
+          <span class="yg-story-tag">品牌故事</span>
+          <b>一家小品牌，如何用图库搭起视觉风格</b>
+          <p>我们没有预算拍大制作，于是用三个月时间，从优果网优美图库挑选了两百张图片，归纳出属于自己的三种色调与两种构图习惯。现在团队做任何物料，先看这套“视觉字典”，效率明显高了。</p>
+          <div class="yg-story-foot"><span>某生活方式品牌主理人</span><span>11-09</span></div>
+        </article>
+        <article class="yg-story">
+          <span class="yg-story-tag">日常记录</span>
+          <b>把镜头对准家人之后，素材变少了</b>
+          <p>以前喜欢扫街，一天能拍几百张。开始拍家人以后，常常一整天只按十几次快门。但回头看，被保留下来的是最真实的情绪，这也是我们一直在图库里想找的那种影像。</p>
+          <div class="yg-story-foot"><span>沈知白</span><span>11-05</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WALL -->
+  <section class="yg-section yg-wall" id="yg-wall">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">影像墙</span>
+          <h2 class="yg-h2">官方发布的<em>高品质作品墙</em></h2>
+          <p class="yg-section-sub">不同比例与题材的影像混合呈现，点击卡片可查看更多信息。</p>
+        </div>
+        <button class="yg-btn yg-btn-ghost" type="button" data-yg-open="share">分享影像墙</button>
+      </div>
+
+      <div class="yg-wall-grid">
+        <figure class="yg-wall-item yg-w-lg" data-yg-wall="晨雾中的山脊与第一束光">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Crect width='480' height='360' fill='%23dfe9e4'/%3E%3Ccircle cx='368' cy='86' r='44' fill='%23f2c77c'/%3E%3Cpath d='M0 250 L110 150 L200 226 L300 140 L480 244 V360 H0Z' fill='%23548a70'/%3E%3Cpath d='M0 292 L120 218 L230 280 L340 210 L480 286 V360 H0Z' fill='%232f6350'/%3E%3Cpath d='M0 330 L140 286 L290 330 L420 292 L480 318 V360 H0Z' fill='%231b4535'/%3E%3C/svg%3E" alt="影像墙作品：晨雾中的山脊与第一束光">
+          <figcaption class="yg-wall-cap">晨雾中的山脊与第一束光</figcaption>
+        </figure>
+
+        <figure class="yg-wall-item yg-w-md" data-yg-wall="老街午后的一辆自行车">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f0e6d6'/%3E%3Crect x='0' y='250' width='400' height='150' fill='%23d9c8ad'/%3E%3Ccircle cx='140' cy='300' r='42' fill='none' stroke='%233f5a48' stroke-width='7'/%3E%3Ccircle cx='246' cy='300' r='42' fill='none' stroke='%233f5a48' stroke-width='7'/%3E%3Cpath d='M140 300 L180 230 L246 300 M180 230 L212 230' fill='none' stroke='%233f5a48' stroke-width='6'/%3E%3Crect x='250' y='92' width='104' height='120' rx='6' fill='%23e6d7bf' stroke='%23c9b697' stroke-width='3'/%3E%3Crect x='264' y='108' width='76' height='52' rx='4' fill='%23a9c6b8'/%3E%3C/svg%3E" alt="影像墙作品：老街午后的一辆自行车">
+          <figcaption class="yg-wall-cap">老街午后的一辆自行车</figcaption>
+        </figure>
+
+        <figure class="yg-wall-item yg-w-sm" data-yg-wall="桌面上的早餐与一杯咖啡">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 380'%3E%3Crect width='300' height='380' fill='%23f3e6d8'/%3E%3Crect x='0' y='210' width='300' height='170' fill='%23e2cdb4'/%3E%3Ccircle cx='108' cy='196' r='55' fill='%23ffffff' stroke='%23dcc8ae' stroke-width='4'/%3E%3Ccircle cx='108' cy='196' r='38' fill='%23c98c56'/%3E%3Cpath d='M158 172 h34 a18 18 0 0 1 0 36 h-34z' fill='%23ffffff' stroke='%23d9c4a9' stroke-width='4'/%3E%3Crect x='178' y='120' width='90' height='70' rx='6' fill='%23ffffff' stroke='%23e0cdb5' stroke-width='3'/%3E%3Ccircle cx='212' cy='152' r='16' fill='%23e8b06c'/%3E%3Crect x='40' y='286' width='150' height='12' rx='6' fill='%23cdb392'/%3E%3C/svg%3E" alt="影像墙作品：桌面上的早餐与一杯咖啡">
+          <figcaption class="yg-wall-cap">桌面上的早餐与一杯咖啡</figcaption>
+        </figure>
+
+        <figure class="yg-wall-item yg-w-wide" data-yg-wall="雨后的城市玻璃幕墙">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340'%3E%3Crect width='600' height='340' fill='%23cddbe2'/%3E%3Crect x='40' y='40' width='150' height='240' rx='6' fill='%239db6c2'/%3E%3Crect x='210' y='80' width='120' height='200' rx='6' fill='%23b4c8d2'/%3E%3Crect x='350' y='24' width='180' height='256' rx='6' fill='%2389a3b1'/%3E%3Cg fill='%23e6eef2' opacity='.8'%3E%3Crect x='56' y='58' width='30' height='38' rx='2'/%3E%3Crect x='96' y='58' width='30' height='38' rx='2'/%3E%3Crect x='136' y='58' width='30' height='38' rx='2'/%3E%3Crect x='56' y='112' width='30' height='38' rx='2'/%3E%3Crect x='96' y='112' width='30' height='38' rx='2'/%3E%3Crect x='136' y='112' width='30' height='38' rx='2'/%3E%3Crect x='366' y='44' width='34' height='44' rx='2'/%3E%3Crect x='412' y='44' width='34' height='44' rx='2'/%3E%3Crect x='458' y='44' width='34' height='44' rx='2'/%3E%3C/g%3E%3Crect x='0' y='290' width='600' height='50' fill='%23a9bcc6'/%3E%3C/svg%3E" alt="影像墙作品：雨后的城市玻璃幕墙">
+          <figcaption class="yg-wall-cap">雨后的城市玻璃幕墙</figcaption>
+        </figure>
+
+        <figure class="yg-wall-item yg-w-sm" data-yg-wall="巷子里晾晒的白色床单">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 380'%3E%3Crect width='300' height='380' fill='%23e8e4d8'/%3E%3Crect x='0' y='0' width='300' height='120' fill='%23d6d0c0'/%3E%3Cline x1='20' y1='120' x2='280' y2='120' stroke='%239d9a8c' stroke-width='4'/%3E%3Cpath d='M40 122 q20 110 0 130 h70 q-18-40 0-130z' fill='%23ffffff' opacity='.95'/%3E%3Cpath d='M170 122 q16 100 0 124 h72 q-16-42 0-124z' fill='%23f6f3ea' opacity='.95'/%3E%3Crect x='36' y='300' width='80' height='48' rx='5' fill='%23b9b3a0'/%3E%3Crect x='168' y='300' width='84' height='48' rx='5' fill='%23c7c0ad'/%3E%3C/svg%3E" alt="影像墙作品：巷子里晾晒的白色床单">
+          <figcaption class="yg-wall-cap">巷子里晾晒的白色床单</figcaption>
+        </figure>
+
+        <figure class="yg-wall-item yg-w-md" data-yg-wall="办公室午后的自然光">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23eef1e9'/%3E%3Crect x='0' y='280' width='400' height='120' fill='%23d6ddcc'/%3E%3Crect x='52' y='120' width='180' height='140' rx='8' fill='%23ffffff' stroke='%23cdd6c2' stroke-width='3'/%3E%3Crect x='70' y='138' width='144' height='86' rx='5' fill='%23bfd3c1'/%3E%3Crect x='258' y='88' width='94' height='172' rx='6' fill='%23e3e9da' stroke='%23c6cfbe' stroke-width='3'/%3E%3Ccircle cx='300' cy='140' r='22' fill='%23e8b96c'/%3E%3Crect x='80' y='300' width='200' height='14' rx='7' fill='%23bcc8b4'/%3E%3C/svg%3E" alt="影像墙作品：办公室午后的自然光">
+          <figcaption class="yg-wall-cap">办公室午后的自然光</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUX: updates + faq -->
+  <section class="yg-section yg-aux" id="yg-updates">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <span class="yg-eyebrow">企业动态与帮助中心</span>
+          <h2 class="yg-h2">优果网优美图库的<em>官方发布与常见问题</em></h2>
+          <p class="yg-section-sub">关于内容更新、活动报名与授权使用的说明，均在此处集中呈现。</p>
+        </div>
+      </div>
+
+      <div class="yg-aux-grid">
+        <div>
+          <div class="yg-updates">
+            <div class="yg-update">
+              <div class="yg-update-date"><b>18</b><span>11月</span></div>
+              <div class="yg-update-info">
+                <b>「秋日光影计划」第二期上线，新增 1,280 张正版高清图片</b>
+                <p>本期补充了山野、街巷与室内自然光三类场景，同步提供调色参考文档，企业用户可批量下载。</p>
+              </div>
+            </div>
+            <div class="yg-update">
+              <div class="yg-update-date"><b>14</b><span>11月</span></div>
+              <div class="yg-update-info">
+                <b>11 月创作者激励活动开放报名</b>
+                <p>面向所有签约创作者，围绕“日常记录”与“城市探索”两个方向征集作品，优秀作品将在首页焦点位展示。</p>
+              </div>
+            </div>
+            <div class="yg-update">
+              <div class="yg-update-date"><b>08</b><span>11月</span></div>
+              <div class="yg-update-info">
+                <b>图库检索功能升级：支持颜色与构图双条件筛选</b>
+                <p>新增主色调、画面留白比例与主体位置筛选维度，移动端同步上线，帮助品牌更快找到匹配素材。</p>
+              </div>
+            </div>
+            <div class="yg-update">
+              <div class="yg-update-date"><b>02</b><span>11月</span></div>
+              <div class="yg-update-info">
+                <b>企业视觉解决方案 2026 版白皮书上线</b>
+                <p>由平台编辑团队联合品牌设计师编写，梳理年度视觉趋势与素材使用规范，可在帮助中心获取摘要版。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="yg-faq">
+          <div class="yg-faq">
+            <details open>
+              <summary>优果网优美图库的图片可以用于商业项目吗？</summary>
+              <p>可以。平台素材分为标准商用授权与扩展授权两类，均附带明确的授权说明与使用范围。企业用户在下载前可在详情页查看具体条款，如有特殊场景需求，可通过联系我们获取定制说明。</p>
+            </details>
+            <details>
+              <summary>如何申请成为签约创作者？</summary>
+              <p>在页面任意“投稿”入口提交作品链接与个人简介，编辑团队会在五个工作日内完成初审。通过后进入为期一个月的试运营期，期间会有内容规范与标签体系的指导。</p>
+            </details>
+            <details>
+              <summary>图片的画质与规格是怎样的？</summary>
+              <p>平台所有正版素材均提供高清版本，长边不低于 3000 像素，部分专题提供原片级文件。视频素材统一为 1080P 及以上，并标注时长与编码信息。</p>
+            </details>
+            <details>
+              <summary>企业客户可以申请定制拍摄或视觉方案吗？</summary>
+              <p>可以。优果网优美图库为企业提供视觉风格诊断、专题定制与长期内容陪伴三类服务，可通过联系入口提交需求，我们会安排内容顾问对接。</p>
+            </details>
+            <details>
+              <summary>为什么同一张图片在不同设备上颜色略有差异？</summary>
+              <p>图片均经过标准色彩空间处理，显示差异通常来自设备屏幕的色彩配置。如需用于印刷或高标准输出，建议下载时选择附带色彩说明的版本。</p>
+            </details>
+            <details>
+              <summary>平台是否支持团队协作与素材管理？</summary>
+              <p>企业账户支持多成员协作，可建立共享收藏夹、统一授权记录与使用台账，方便团队内部管理与合规审查。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <div class="yg-contact-bar" id="yg-contact">
+        <div>
+          <h3>与优果网优美图库一起，把视觉表达做得更专业</h3>
+          <p>无论你是需要素材支持的企业品牌，还是希望被看见的创作者，都欢迎与我们联系。官方网站持续更新，期待你的作品与需求。</p>
+        </div>
+        <div class="yg-contact-actions">
+          <button class="yg-btn yg-btn-primary" type="button" data-yg-open="submit">提交投稿</button>
+          <button class="yg-btn yg-btn-ghost" type="button" data-yg-open="contact">联系合作</button>
+          <button class="yg-btn yg-btn-ghost" type="button" data-yg-open="share">分享本页</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="yg-footer">
+  <div class="yg-wrap">
+    <div class="yg-footer-grid">
+      <div>
+        <div class="yg-fbrand">
+          <span class="yg-brand-mark">优</span>
+          <b>优果网优美图库</b>
+        </div>
+        <p>优果网优美图库官方网站，专注原创正版影像与企业视觉内容生态，以品质与口碑服务品牌与创作者，持续运营中。</p>
+        <p style="margin-top:10px;opacity:.75">企业视觉服务 · 原创影像授权 · 创作者社区</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#yg-focus">焦点内容</a></li>
+          <li><a href="#yg-topics">专题企划</a></li>
+          <li><a href="#yg-creators">创作者矩阵</a></li>
+          <li><a href="#yg-wall">影像墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="#yg-about">品牌故事</a></li>
+          <li><a href="#yg-updates">企业动态</a></li>
+          <li><a href="#yg-faq">帮助中心</a></li>
+          <li><a href="#yg-contact">联系我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方发布</h4>
+        <p>内容更新每小时同步，正版素材均标注授权范围。企业合作与投稿请通过页面入口提交，我们会尽快回复。</p>
+        <p style="margin-top:10px;opacity:.75">服务时间：周一至周五 09:30 - 18:30</p>
+      </div>
+    </div>
+    <div class="yg-footer-bottom">
+      <span>© 2026 优果网优美图库 版权所有 · 官方网站</span>
+      <span>持续运营 · 正版授权 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="yg-top-btn" id="ygTopBtn" type="button" aria-label="回到顶部">↑</button>
+<div class="yg-toast" id="ygToast" role="status" aria-live="polite"></div>
+
+<div class="yg-modal" id="ygModal" role="dialog" aria-modal="true" aria-labelledby="ygModalTitle">
+  <div class="yg-modal-card">
+    <h3 id="ygModalTitle">提示</h3>
+    <p id="ygModalDesc"></p>
+    <div id="ygModalFields"></div>
+    <div class="yg-modal-foot">
+      <button class="yg-btn yg-btn-ghost" type="button" id="ygModalCancel">关闭</button>
+      <button class="yg-btn yg-btn-primary" type="button" id="ygModalOk">确认</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('ygToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* mobile nav */
+  var navToggle = document.getElementById('ygNavToggle');
+  var nav = document.getElementById('ygNav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.textContent = open ? '✕' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.textContent = '☰';
+      });
+    });
+  }
+
+  /* search feedback */
+  var searchInput = document.getElementById('ygSearchInput');
+  var searchBtn = document.getElementById('ygSearchBtn');
+  var searchHint = document.getElementById('ygSearchHint');
+  var hotKeywords = ['秋日光影','城市清晨','早餐','玻璃幕墙','创作者','品牌视觉','人像','山脊'];
+  function doSearch(){
+    if(!searchInput || !searchHint) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '试试搜索：' + hotKeywords.slice(0,4).map(function(k){return '<b>'+k+'</b>';}).join('、');
+      searchHint.classList.add('is-open');
+      return;
+    }
+    var match = hotKeywords.filter(function(k){ return k.indexOf(q) > -1 || q.indexOf(k) > -1; });
+    if(match.length){
+      searchHint.innerHTML = '找到 '+match.length+' 组相关内容：' + match.map(function(k){return '<b>'+k+'</b>';}).join('、');
+      showToast('已为你匹配到相关内容');
+    }else{
+      searchHint.innerHTML = '暂未找到「'+q+'」的直接结果，可尝试浏览专题企划或联系编辑推荐。';
+      showToast('未找到直接结果');
+    }
+    searchHint.classList.add('is-open');
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+    searchInput.addEventListener('input', function(){ if(searchHint){ searchHint.classList.remove('is-open'); } });
+  }
+  document.addEventListener('click', function(e){
+    if(searchHint && !searchHint.contains(e.target) && e.target !== searchInput && e.target !== searchBtn){
+      searchHint.classList.remove('is-open');
+    }
+  });
+
+  /* like / save */
+  document.querySelectorAll('[data-yg-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = btn.querySelector('[data-yg-like-num]');
+      var liked = btn.classList.toggle('is-liked');
+      if(numEl){
+        var n = parseInt(numEl.textContent, 10) || 0;
+        numEl.textContent = liked ? n + 1 : Math.max(0, n - 1);
+      }
+      showToast(liked ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('[data-yg-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('is-saved');
+      btn.textContent = saved ? '已收藏' : '收藏';
+      showToast(saved ? '已加入收藏夹' : '已从收藏夹移除');
+    });
+  });
+
+  /* wall card click */
+  document.querySelectorAll('[data-yg-wall]').forEach(function(fig){
+    fig.addEventListener('click', function(){
+      showToast('作品：' + fig.getAttribute('data-yg-wall'));
+    });
+  });
+
+  /* modal */
+  var modal = document.getElementById('ygModal');
+  var modalTitle = document.getElementById('ygModalTitle');
+  var modalDesc = document.getElementById('ygModalDesc');
+  var modalFields = document.getElementById('ygModalFields');
+  var modalCancel = document.getElementById('ygModalCancel');
+  var modalOk = document.getElementById('ygModalOk');
+  var modalConfig = {
+    submit: {
+      title: '提交投稿',
+      desc: '欢迎向优果网优美图库提交原创作品。请填写作品名称与联系方式，编辑团队将在五个工作日内回复。',
+      fields: '<input type="text" placeholder="作品名称 / 专题方向" aria-label="作品名称"><input type="text" placeholder="联系方式（邮箱或微信）" aria-label="联系方式">'
+    },
+    contact: {
+      title: '企业合作联系',
+      desc: '请留下你的品牌名称与需求方向，我们的内容顾问会尽快与你对接视觉方案。',
+      fields: '<input type="text" placeholder="品牌名称" aria-label="品牌名称"><textarea rows="3" placeholder="需求简述，例如：年度视觉素材支持" aria-label="需求简述"></textarea>'
+    },
+    share: {
+      title: '分享本页',
+      desc: '你可以复制链接分享给同事或朋友，也可以将当前页面加入收藏，方便下次访问。',
+      fields: ''
+    }
+  };
+  function openModal(type){
+    var cfg = modalConfig[type] || modalConfig.share;
+    modalTitle.textContent = cfg.title;
+    modalDesc.textContent = cfg.desc;
+    modalFields.innerHTML = cfg.fields || '';
+    modalOk.textContent = type === 'share' ? '复制链接' : '提交';
+    modal.classList.add('is-open');
+    modal.setAttribute('data-mode', type);
+  }
+  function closeModal(){ modal.classList.remove('is-open'); }
+  document.querySelectorAll('[data-yg-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openModal(btn.getAttribute('data-yg-open')); });
+  });
+  if(modalCancel){ modalCancel.addEventListener('click', closeModal); }
+  if(modal){
+    modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('is-open')){ closeModal(); } });
+  }
+  if(modalOk){
+    modalOk.addEventListener('click', function(){
+      var mode = modal.getAttribute('data-mode');
+      if(mode === 'share'){
+        var link = window.location.href;
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(link).then(function(){
+            showToast('链接已复制');
+          }).catch(function(){ showToast('分享链接：' + link); });
+        }else{
+          showToast('分享链接：' + link);
+        }
+        closeModal();
+      }else{
+        var filled = false;
+        modalFields.querySelectorAll('input,textarea').forEach(function(el){ if(el.value.trim()) filled = true; });
+        closeModal();
+        showToast(filled ? '已提交，我们会尽快联系你' : '请补充信息后再次提交');
+      }
+    });
+  }
+
+  /* back to top */
+  var topBtn = document.getElementById('ygTopBtn');
+  window.addEventListener('scroll', function(){
+    if(topBtn){ topBtn.classList.toggle('is-show', window.scrollY > 560); }
+  }, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  }
+
+  /* number roll-in for hero stats */
+  var stats = document.querySelectorAll('.yg-hero-stats li strong');
+  if(stats.length && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity = '1';
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.6});
+    stats.forEach(function(el){ el.style.opacity = '0'; el.style.transition = 'opacity .6s .1s'; io.observe(el); });
+  }
+})();
+</script>
+</body>
+          </html>
